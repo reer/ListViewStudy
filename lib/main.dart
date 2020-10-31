@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/card_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,6 +30,27 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var _cardList = List<CardList>();
+
+  @override
+  void initState() {
+    _cardList.add(CardList(
+      'Text1',
+    ));
+    _cardList.add(CardList(
+      'Text2',
+    ));
+    _cardList.add(CardList(
+      'Text3',
+    ));
+    _cardList.add(CardList(
+      'Text4',
+    ));
+    _cardList.add(CardList(
+      'Text5',
+    ));
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,17 +59,14 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text('ListViewApp'),
         ),
-        body: ListView(
-            children: [
-              _menueItem('メニュー1'),
-              _menueItem('メニュー2'),
-              _menueItem('メニュー3'),
-              _menueItem('メニュー4'),
-              _menueItem('メニュー5'),
-              _menueItem('メニュー6'),
-              _menueItem('メニュー7'),
-            ]
-        ),
+        body: Container(
+          child: ListView.builder(
+              itemCount: _cardList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return _cardList[index];
+              },
+          ),
+        )
       ),
     );
   }
