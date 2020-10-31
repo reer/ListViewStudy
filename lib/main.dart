@@ -70,26 +70,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-
-  Widget _menueItem(String title) {
-    return GestureDetector(
-      child: Container(
-        padding: EdgeInsets.all(8.0),
-        decoration: new BoxDecoration(
-          border: new Border(bottom: BorderSide(width: 1.0, color: Colors.red))
-        ),
-        child: Row(
-          children: <Widget>[
-            Text(
-              title,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0
-              )
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }
