@@ -10,7 +10,7 @@ class CardList extends StatelessWidget {
     return Card(
       child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
         ListTile(
-          trailing: Icon(Icons.more_vert),
+          leading: FlutterLogo(),
           title: Text(_text),
           subtitle: Text(
               "This is subtitle. Subtitle is very long and use three lines."),
