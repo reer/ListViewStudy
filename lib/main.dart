@@ -21,9 +21,10 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key key, this.title, this.thumbnail}) : super(key: key);
 
   final String title;
+  final thumbnail;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -48,6 +49,24 @@ class _MyHomePageState extends State<MyHomePage> {
     ));
     _cardList.add(CardList(
       'Text5',
+    ));
+    _cardList.add(CardList(
+      'Text6',
+    ));
+    _cardList.add(CardList(
+      'Text7',
+    ));
+    _cardList.add(CardList(
+      'Text8',
+    ));
+    _cardList.add(CardList(
+      'Text9',
+    ));
+    _cardList.add(CardList(
+      'Text10',
+    ));
+    _cardList.add(CardList(
+      'Text11',
     ));
     super.initState();
   }
