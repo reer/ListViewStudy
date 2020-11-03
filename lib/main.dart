@@ -77,6 +77,21 @@ class _MyHomePageState extends State<MyHomePage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('ListViewApp'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.add),
+              onPressed: () => setState(() {
+               // _count++;
+              }),
+            ),
+            IconButton(
+              icon: Icon(Icons.remove),
+              onPressed: () => setState(() {
+               // _count--;
+              }),
+            ),
+          ],
+
         ),
         body: Container(
           child: ListView.builder(
