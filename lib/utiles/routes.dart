@@ -1,5 +1,7 @@
-import 'package:flutter_list_app/main.dart';
+import '../list_instructor.dart';
+import '../novel_design.dart';
 
 Map<String, dynamic> appRoutes = {
-  //'/home': HomeScreen(),
+  //'/novel_design': NovelDesign(),
+  '/novel_design': ListimstrutorPage(),
 };

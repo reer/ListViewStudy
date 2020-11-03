@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_app/card_list.dart';
 
+import 'list_instructor.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -80,16 +82,24 @@ class _MyHomePageState extends State<MyHomePage> {
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.add),
-              onPressed: () => setState(() {
-               // _count++;
-              }),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ListimstrutorPage(),
+                  ),
+                );
+              },
+              // onPressed: () {
+              //   Navigator.pushNamed(context, '/novel_design');
+              // },
             ),
-            IconButton(
-              icon: Icon(Icons.remove),
-              onPressed: () => setState(() {
-               // _count--;
-              }),
-            ),
+            // IconButton(
+            //   icon: Icon(Icons.remove),
+            //   onPressed: () => setState(() {
+            //    // _count--;
+            //   }),
+            // ),
           ],
 
         ),
