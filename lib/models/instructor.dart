@@ -11,21 +11,21 @@ var allInstructors = [
   Instuctor(
     instructorName: 'Cora Wong',
     rating: '9.95',
-    instructorPic: 'assets/a.png',
+    instructorPic: 'assets/images/a.png',
   ),
   Instuctor(
     instructorName: 'Cora Wong',
     rating: '9.95',
-    instructorPic: 'assets/b.png',
+    instructorPic: 'assets/images/b.png',
   ),
   Instuctor(
     instructorName: 'Cora Wong',
     rating: '9.95',
-    instructorPic: 'assets/c.png',
+    instructorPic: 'assets/images/c.png',
   ),
   Instuctor(
     instructorName: 'Cora Wong',
     rating: '9.95',
-    instructorPic: 'assets/d.png',
+    instructorPic: 'assets/images/d.png',
   ),
 ];
