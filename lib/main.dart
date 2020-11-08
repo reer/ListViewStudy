@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_app/card_list.dart';
 
-import 'list_instructor.dart';
+import 'instructor/list_instructor.dart';
+import 'novel_design.dart';
 
 void main() {
   runApp(MyApp());
@@ -116,6 +117,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => ListimstrutorPage(),
+                  ),
+                );
+              },
+            ),
+            GestureDetector(
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+                  child: Text('Plants Screen', style: TextStyle(fontSize: 18)),
+                ),
+              ),
+              onTap: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => NovelDesign(),
                   ),
                 );
               },
