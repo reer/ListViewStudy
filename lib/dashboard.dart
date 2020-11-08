@@ -56,7 +56,9 @@ class _DashbordPageState extends State<DashbordPage> {
           height: MediaQuery.of(context).size.height - 150.0,
           child: ListView(
             children: <Widget>[
-              _buildListItem('assets/images/jp3.png', 'japan', 'Explore tha land of the rising night')
+              _buildListItem('assets/images/jp1.png', 'Mt.Fuji', 'Explore tha land of the rising night'),
+              _buildListItem('assets/images/jp2.png', 'Kmakura', 'Explore tha land of the rising night'),
+              _buildListItem('assets/images/jp3.png', 'Ajisai', 'Explore tha land of the rising night')
             ],
           ),
         )
