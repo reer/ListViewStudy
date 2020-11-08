@@ -71,7 +71,19 @@ class _InstructorDetailsState extends State<InstructorDetails> {
                             fontWeight: FontWeight.w400,
                             color: Color(0xFFC2C0B6))),
                   ],
-                )
+                ),
+                SizedBox(height: 3.0),
+                Text('A Star rating with touch and swipe rate enabled.Read only and adjustable rating, Web Support',
+                    style: GoogleFonts.sourceSansPro(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF201F1C))),
+                SizedBox(height: 5.0),
+                Text('Read More',
+                    style: GoogleFonts.sourceSansPro(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFFF36F32))),
               ],
             ),
             decoration: BoxDecoration(
