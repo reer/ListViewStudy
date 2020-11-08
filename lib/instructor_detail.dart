@@ -104,6 +104,21 @@ class _InstructorDetailsState extends State<InstructorDetails> {
                                   fontWeight: FontWeight.w400,
                                   color: Color(0xFF5E5B54))),
                         ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text('4',
+                              style: GoogleFonts.tinos(
+                                fontSize: 25.0,
+                                fontWeight: FontWeight.w500,
+                              )),
+                          Text('Programs',
+                              style: GoogleFonts.tinos(
+                                  fontSize: 15.0,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF5E5B54))),
+                        ],
                       )
                     ],
                   ),
@@ -115,6 +130,34 @@ class _InstructorDetailsState extends State<InstructorDetails> {
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(25.0),
                     topRight: Radius.circular(25.0))),
+          ),
+        ),
+        Align(
+          alignment: Alignment.bottomRight,
+          child: Container(
+            height: 75.0,
+            width: 100.0,
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('>',
+                      style: GoogleFonts.sourceSansPro(
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFFFFF2D5))),
+                  Text('Availability',
+                      style: GoogleFonts.sourceSansPro(
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xFFFFF2D5))),
+                ],
+              ),
+            ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0)),
+                color: Color(0xFFFE6D2E)
+              )
           ),
         )
       ],
