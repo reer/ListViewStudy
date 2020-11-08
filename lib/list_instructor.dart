@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/instructor_detail.dart';
 import 'package:flutter_list_app/models/instructor.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,6 +10,7 @@ class ListimstrutorPage extends StatefulWidget {
 
 class _ListimstrutorPageState extends State<ListimstrutorPage> {
   final instructors = allInstructors;
+
 
   @override
   Widget build(BuildContext context) {
@@ -94,9 +96,14 @@ class _ListimstrutorPageState extends State<ListimstrutorPage> {
   }
 
   //画像の背景
-  buildInstructorGrid(Instuctor instuctor) {
+  buildInstructorGrid(Instructor instuctor) {
     return GestureDetector(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            // builder: (context) => InstructorDetails(selectInstructor)
+              builder: (context) => InstructorDetails()
+          ));
+        },
         child: Padding(
           padding: EdgeInsets.all(5.0),
           child: Stack(
