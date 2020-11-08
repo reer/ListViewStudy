@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'detailspage.dart';
+
 class DashbordPage extends StatefulWidget {
   @override
   _DashbordPageState createState() => _DashbordPageState();
@@ -109,7 +111,13 @@ class _DashbordPageState extends State<DashbordPage> {
                   ),
                   SizedBox(height: 20.0,),
                   InkWell(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => DetailsPage(imgPath: imgPath, title: country),
+                        ),
+                      );
+                    },
                     child: Container(
                       height: 50.0,
                       width: 125.0,
