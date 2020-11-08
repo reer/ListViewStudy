@@ -24,6 +24,7 @@ class _noveldesign extends State<NovelDesign> with SingleTickerProviderStateMixi
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF202020),
+      body: children[selectedItem],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color(0xFF1B1B1B),
         selectedItemColor: Color(0xFFFD4F99),
