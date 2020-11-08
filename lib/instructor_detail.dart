@@ -84,6 +84,30 @@ class _InstructorDetailsState extends State<InstructorDetails> {
                         fontSize: 14.0,
                         fontWeight: FontWeight.w400,
                         color: Color(0xFFF36F32))),
+                SizedBox(height: 10.0),
+                Container(
+                  width: 150.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text('200',
+                              style: GoogleFonts.tinos(
+                                  fontSize: 25.0,
+                                  fontWeight: FontWeight.w500,
+                                  )),
+                          Text('Review',
+                              style: GoogleFonts.tinos(
+                                  fontSize: 15.0,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF5E5B54))),
+                        ],
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
             decoration: BoxDecoration(
