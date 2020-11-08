@@ -33,45 +33,45 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var _cardList = List<CardList>();
-
-  @override
-  void initState() {
-    _cardList.add(CardList(
-      'Text1',
-    ));
-    _cardList.add(CardList(
-      'Text2',
-    ));
-    _cardList.add(CardList(
-      'Text3',
-    ));
-    _cardList.add(CardList(
-      'Text4',
-    ));
-    _cardList.add(CardList(
-      'Text5',
-    ));
-    _cardList.add(CardList(
-      'Text6',
-    ));
-    _cardList.add(CardList(
-      'Text7',
-    ));
-    _cardList.add(CardList(
-      'Text8',
-    ));
-    _cardList.add(CardList(
-      'Text9',
-    ));
-    _cardList.add(CardList(
-      'Text10',
-    ));
-    _cardList.add(CardList(
-      'Text11',
-    ));
-    super.initState();
-  }
+  // var _cardList = List<CardList>();
+  //
+  // @override
+  // void initState() {
+  //   _cardList.add(CardList(
+  //     'Text1'
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text2',
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text3',
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text4',
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text5',
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text6',
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text7',
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text8',
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text9',
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text10',
+  //   ));
+  //   _cardList.add(CardList(
+  //     'Text11',
+  //   ));
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -94,22 +94,33 @@ class _MyHomePageState extends State<MyHomePage> {
               //   Navigator.pushNamed(context, '/novel_design');
               // },
             ),
-            // IconButton(
-            //   icon: Icon(Icons.remove),
-            //   onPressed: () => setState(() {
-            //    // _count--;
-            //   }),
-            // ),
           ],
 
         ),
-        body: Container(
-          child: ListView.builder(
-              itemCount: _cardList.length,
-              itemBuilder: (BuildContext context, int index) {
-                return _cardList[index];
+        body: ListView(
+          // child: ListView.builder(
+          //     itemCount: _cardList.length,
+          //     itemBuilder: (BuildContext context, int index) {
+          //       return _cardList[index];
+          //     },
+          // ),
+          children: <Widget>[
+            GestureDetector(
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+                  child: Text('Instructor Screen', style: TextStyle(fontSize: 18)),
+                ),
+              ),
+              onTap: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ListimstrutorPage(),
+                  ),
+                );
               },
-          ),
+            ),
+          ],
         )
       ),
     );
