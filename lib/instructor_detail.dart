@@ -160,6 +160,61 @@ class _InstructorDetailsState extends State<InstructorDetails> {
               )
           ),
         ),
+        Align(
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15.0, top: 30.0),
+            child: Container(
+              height: 40.0,
+              width: 40.0,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Color(0xFFA4B2AE)
+              ),
+              child: Center(
+                child: Icon(Icons.arrow_back, size: 20.0, color: Colors.white),
+              ),
+            ),
+          ),
+        ),
+        Align(
+          alignment: Alignment.topRight,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15.0, top: 30.0),
+            child: Container(
+              height: 40.0,
+              width: 40.0,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFFA4B2AE)
+              ),
+              child: Center(
+                child: Icon(Icons.favorite_border, size: 20.0, color: Colors.white),
+              ),
+            ),
+          ),
+        ),
+        Positioned(
+          top: (screenHeight - screenHeight / 3) / 2,
+          left: (screenWidth /2) - 75.0,
+          child: Container(
+            height: 40.0,
+            width: 150.0,
+            decoration: BoxDecoration(
+              color: Color(0xFFA4B2AE),
+              borderRadius: BorderRadius.circular(20.0)
+            ),
+            child: Center(
+              child: Text('Explore Programs',
+                style: GoogleFonts.sourceSansPro(
+                  fontSize: 14.0,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white
+                ),
+              ),
+            ),
+          ),
+        )
         // Positioned(
         //   top: screenHeight - screenHeight / 3 - 45.0,
         //   right: 25.0,
