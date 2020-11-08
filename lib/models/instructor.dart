@@ -1,29 +1,29 @@
 
-class Instuctor {
+class Instructor {
   String instructorName;
   String rating;
   String instructorPic;
 
-  Instuctor({this.instructorName, this.rating, this.instructorPic});
+  Instructor({this.instructorName, this.rating, this.instructorPic});
 }
 
 var allInstructors = [
-  Instuctor(
+  Instructor(
     instructorName: 'Cora Wong',
     rating: '9.95',
     instructorPic: 'assets/images/a.png',
   ),
-  Instuctor(
+  Instructor(
     instructorName: 'Cora Wong',
     rating: '9.95',
     instructorPic: 'assets/images/b.png',
   ),
-  Instuctor(
+  Instructor(
     instructorName: 'Cora Wong',
     rating: '9.95',
     instructorPic: 'assets/images/c.png',
   ),
-  Instuctor(
+  Instructor(
     instructorName: 'Cora Wong',
     rating: '9.95',
     instructorPic: 'assets/images/d.png',
