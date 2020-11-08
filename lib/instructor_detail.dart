@@ -159,7 +159,25 @@ class _InstructorDetailsState extends State<InstructorDetails> {
                 color: Color(0xFFFE6D2E)
               )
           ),
-        )
+        ),
+        // Positioned(
+        //   top: screenHeight - screenHeight / 3 - 45.0,
+        //   right: 25.0,
+        //   child: Hero(
+        //     // tag: widget.selectInstructor.instructorPic,
+        //     child: Container(
+        //       height: 100.0,
+        //       width: 100.0,
+        //       decoration: BoxDecoration(
+        //         image: DecorationImage(
+        //           // image: AssetImage(widget.selectInstructor.instructorPic),
+        //             image: AssetImage('assets/images/b.png'),
+        //           fit: BoxFit.cover),
+        //           borderRadius: BorderRadius.circular(15.0)
+        //         ),
+        //       ),
+        //     ),
+        //   ),
       ],
     ));
   }
