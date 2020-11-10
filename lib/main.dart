@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_app/card_list.dart';
 
+import 'buttomNavigation.dart';
 import 'instructor/list_instructor.dart';
 import 'novel_design.dart';
 
@@ -25,7 +26,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title, this.thumbnail}) : super(key: key);
-
   final String title;
   final thumbnail;
 
@@ -34,48 +34,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // var _cardList = List<CardList>();
-  //
-  // @override
-  // void initState() {
-  //   _cardList.add(CardList(
-  //     'Text1'
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text2',
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text3',
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text4',
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text5',
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text6',
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text7',
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text8',
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text9',
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text10',
-  //   ));
-  //   _cardList.add(CardList(
-  //     'Text11',
-  //   ));
-  //   super.initState();
-  // }
+
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -99,12 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
         ),
         body: ListView(
-          // child: ListView.builder(
-          //     itemCount: _cardList.length,
-          //     itemBuilder: (BuildContext context, int index) {
-          //       return _cardList[index];
-          //     },
-          // ),
           children: <Widget>[
             GestureDetector(
               child: Card(
@@ -137,7 +94,21 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
           ],
-        )
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.arrow_forward),
+              title: Text('Home'),
+              backgroundColor: Colors.blue
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.arrow_forward),
+                title: Text('Setting'),
+                backgroundColor: Colors.blue
+            ),
+          ],
+        ),
       ),
     );
   }
