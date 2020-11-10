@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/card_list.dart';
+
+import 'list_instructor.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,15 +23,55 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key key, this.title, this.thumbnail}) : super(key: key);
 
   final String title;
+  final thumbnail;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var _cardList = List<CardList>();
+
+  @override
+  void initState() {
+    _cardList.add(CardList(
+      'Text1',
+    ));
+    _cardList.add(CardList(
+      'Text2',
+    ));
+    _cardList.add(CardList(
+      'Text3',
+    ));
+    _cardList.add(CardList(
+      'Text4',
+    ));
+    _cardList.add(CardList(
+      'Text5',
+    ));
+    _cardList.add(CardList(
+      'Text6',
+    ));
+    _cardList.add(CardList(
+      'Text7',
+    ));
+    _cardList.add(CardList(
+      'Text8',
+    ));
+    _cardList.add(CardList(
+      'Text9',
+    ));
+    _cardList.add(CardList(
+      'Text10',
+    ));
+    _cardList.add(CardList(
+      'Text11',
+    ));
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,40 +79,38 @@ class _MyHomePageState extends State<MyHomePage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('ListViewApp'),
-        ),
-        body: ListView(
-            children: [
-              _menueItem('メニュー1'),
-              _menueItem('メニュー2'),
-              _menueItem('メニュー3'),
-              _menueItem('メニュー4'),
-              _menueItem('メニュー5'),
-              _menueItem('メニュー6'),
-              _menueItem('メニュー7'),
-            ]
-        ),
-      ),
-    );
-  }
-
-  Widget _menueItem(String title) {
-    return GestureDetector(
-      child: Container(
-        padding: EdgeInsets.all(8.0),
-        decoration: new BoxDecoration(
-          border: new Border(bottom: BorderSide(width: 1.0, color: Colors.red))
-        ),
-        child: Row(
-          children: <Widget>[
-            Text(
-              title,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0
-              )
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.add),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ListimstrutorPage(),
+                  ),
+                );
+              },
+              // onPressed: () {
+              //   Navigator.pushNamed(context, '/novel_design');
+              // },
             ),
+            // IconButton(
+            //   icon: Icon(Icons.remove),
+            //   onPressed: () => setState(() {
+            //    // _count--;
+            //   }),
+            // ),
           ],
+
         ),
+        body: Container(
+          child: ListView.builder(
+              itemCount: _cardList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return _cardList[index];
+              },
+          ),
+        )
       ),
     );
   }
