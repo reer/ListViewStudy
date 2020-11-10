@@ -98,6 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
+          // backgroundColor: Colors.blue, //背景色変更
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.arrow_forward),
