@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/instructor/list_instructor.dart';
+
+import '../novel_design.dart';
 
 class Home extends StatelessWidget {
   int _tabIndex;
@@ -17,8 +20,39 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           title: Text('Home'),
         ),
-        body: Center(
-          child: RaisedButton(),
+        body: ListView(
+          children: <Widget>[
+            GestureDetector(
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+                  child: Text('Instructor Screen', style: TextStyle(fontSize: 18)),
+                ),
+              ),
+              onTap: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ListimstrutorPage(),
+                  ),
+                );
+              },
+            ),
+            GestureDetector(
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+                  child: Text('Plants Screen', style: TextStyle(fontSize: 18)),
+                ),
+              ),
+              onTap: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => NovelDesign(),
+                  ),
+                );
+              },
+            ),
+          ],
         ),
       ),
     );
