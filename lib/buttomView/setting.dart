@@ -1,27 +1,32 @@
-
 import 'package:flutter/material.dart';
 
-class Setting extends StatelessWidget {
-  int _tabIndex;
-
+class Setting extends StatefulWidget {
   @override
-  void initState() {
-    _tabIndex = 1;
-  }
+  _settingPageState createState() => _settingPageState();
+}
+
+class _settingPageState extends State<Setting> {
+  var index = 1;
+  List<bool> isSelected = List.generate(3, (_) => false);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Form',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Home'),
-        ),
-        body: Center(
-          child: RaisedButton(),
+    return Scaffold(
+      body: Center(
+        child: ToggleButtons(
+          children: <Widget>[
+            Icon(Icons.ac_unit),
+            Icon(Icons.call),
+            Icon(Icons.cake),
+          ],
+          onPressed: (int index) {
+            setState(() {
+              isSelected[index] = !isSelected[index];
+            });
+          },
+          isSelected: isSelected,
         ),
       ),
     );
   }
 }
-
