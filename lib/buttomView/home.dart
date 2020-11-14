@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_list_app/home/ChatUI/chatU.dart';
+import 'package:flutter_list_app/home/ChatUI/chatUi.dart';
 import 'package:flutter_list_app/instructor/list_instructor.dart';
 
 import '../novel_design.dart';
