@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_list_app/card_list.dart';
+import 'package:flutter_list_app/sample.dart';
 
 import 'buttomNavigation.dart';
 import 'buttomView/home.dart';
@@ -18,10 +19,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.blue,
-      //   visualDensity: VisualDensity.adaptivePlatformDensity,
-      // ),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -49,6 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.filter_list, color: Colors.blue),
               title: Text('SETTING')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.filter_list, color: Colors.blue),
+              title: Text('TEXT')),
         ],
       ),
       tabBuilder: (context, index) {
@@ -67,6 +71,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 navigationBar: CupertinoNavigationBar(
                 ),
                 child: Setting(),
+              );
+            });
+          case 2:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                navigationBar: CupertinoNavigationBar(
+                ),
+                child: Sample(),
               );
             });
         }

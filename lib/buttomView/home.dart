@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_list_app/instructor/list_instructor.dart';
 
 import '../novel_design.dart';
+import '../single_scroll_screen.dart';
 
 class Home extends StatelessWidget {
   int _tabIndex;
@@ -26,7 +27,7 @@ class Home extends StatelessWidget {
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-                  child: Text('Instructor Screen', style: TextStyle(fontSize: 18)),
+                  child: Text('ListView & Row & Padding', style: TextStyle(fontSize: 18)),
                 ),
               ),
               onTap: (){
@@ -48,6 +49,21 @@ class Home extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => NovelDesign(),
+                  ),
+                );
+              },
+            ),
+            GestureDetector(
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+                  child: Text('SingleChildScreen', style: TextStyle(fontSize: 18)),
+                ),
+              ),
+              onTap: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => SingleChildScreen(),
                   ),
                 );
               },
