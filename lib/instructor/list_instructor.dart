@@ -25,7 +25,9 @@ class _ListimstrutorPageState extends State<ListimstrutorPage> {
               children: <Widget>[
                 IconButton(
                   icon: Icon(Icons.arrow_back),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }
                 ),
                 IconButton(
                   icon: Icon(Icons.menu),
