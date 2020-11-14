@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_app/home/ChatUI/category_selector.dart';
+import 'package:flutter_list_app/home/ChatUI/favorite_contacts.dart';
 
 class ChatUiScreen extends StatefulWidget {
   @override
@@ -46,6 +47,11 @@ class _chatUiScreen extends State<ChatUiScreen> {
                   topLeft: Radius.circular(30.0),
                   topRight: Radius.circular(30.0),
                 ),
+              ),
+              child: Column(
+                children: <Widget>[
+                  FavoriteContactsScreen()
+                ],
               ),
             ),
           ),

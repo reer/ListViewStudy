@@ -25,57 +25,57 @@ final User currentUser = User(
 //Users: 登録ユーザー(?)
 final User test1 = User(
     id: 0,
-    name: 'Current User',
+    name: 'Test1',
     imageUrl: 'assets/images/a.png'
 );
 final User test2 = User(
     id: 1,
-    name: 'Current User',
+    name: 'Test2',
     imageUrl: 'assets/images/a.png'
 );
 final User test3 = User(
     id: 2,
-    name: 'Current User',
+    name: 'Test3',
     imageUrl: 'assets/images/a.png'
 );
 final User test4 = User(
     id: 3,
-    name: 'Current User',
+    name: 'Test4',
     imageUrl: 'assets/images/a.png'
 );
 final User test5 = User(
     id: 4,
-    name: 'Current User',
+    name: 'Test5',
     imageUrl: 'assets/images/a.png'
 );
 final User test6 = User(
     id: 5,
-    name: 'Current User',
+    name: 'Test6',
     imageUrl: 'assets/images/a.png'
 );
 final User test7 = User(
     id: 6,
-    name: 'Current User',
+    name: 'Test7',
     imageUrl: 'assets/images/a.png'
 );
 final User test8 = User(
     id: 7,
-    name: 'Current User',
+    name: 'Test8',
     imageUrl: 'assets/images/a.png'
 );
 final User test9 = User(
     id: 8,
-    name: 'Current User',
+    name: 'Test9',
     imageUrl: 'assets/images/a.png'
 );
 final User test10 = User(
     id: 9,
-    name: 'Current User',
+    name: 'Test10',
     imageUrl: 'assets/images/a.png'
 );
 final User test11 = User(
     id: 10,
-    name: 'Current User',
+    name: 'Test11',
     imageUrl: 'assets/images/a.png'
 );
 
