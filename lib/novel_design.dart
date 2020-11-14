@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'dashboard.dart';
+import 'home/dashboard.dart';
 
 
 class NovelDesign extends StatefulWidget {

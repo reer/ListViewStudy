@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_list_app/instructor/list_instructor.dart';
 
 import '../novel_design.dart';
-import '../single_scroll_screen.dart';
+import '../home/single_scroll_screen.dart';
 
 class Home extends StatelessWidget {
   int _tabIndex;
@@ -63,7 +63,7 @@ class Home extends StatelessWidget {
               onTap: (){
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => SingleChildScreen(),
+                    builder: (context) => SideScrollingScreen(),
                   ),
                 );
               },

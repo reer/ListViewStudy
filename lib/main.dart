@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
               return CupertinoPageScaffold(
                 navigationBar: CupertinoNavigationBar(
                 ),
-                child: Setting(),
+                child: ButtonListScreen(),
               );
             });
           case 2:
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
               return CupertinoPageScaffold(
                 navigationBar: CupertinoNavigationBar(
                 ),
-                child: Sample(),
+                child: LayoutSample(),
               );
             });
         }

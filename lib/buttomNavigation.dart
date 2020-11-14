@@ -9,7 +9,7 @@ class ButtomNavigation extends StatelessWidget {
 
   final List<Widget> _pageLinks = [
     Home(),
-    Setting(),
+    ButtonListScreen(),
   ];
 
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Sample extends StatefulWidget {
+class LayoutSample extends StatefulWidget {
   @override
-  _samplePage createState() => _samplePage();
+  _layoutSample createState() => _layoutSample();
 }
 
-class _samplePage extends State<Sample> {
+class _layoutSample extends State<LayoutSample> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

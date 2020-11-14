@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SingleChildScreen extends StatefulWidget {
+class SideScrollingScreen extends StatefulWidget {
   @override
-  _singleChildScreen createState() => _singleChildScreen();
+  _sideScrollingScreen createState() => _sideScrollingScreen();
 }
 
-class _singleChildScreen extends State<SingleChildScreen> {
+class _sideScrollingScreen extends State<SideScrollingScreen> {
 
   final List<String> numbers = ['今、夢を見ていた。又、会うぜ。きっと', 'は、みんなに愛されているうちに消えるのが一番良い','すべて神聖なものは夢や思い出と同じ要素から成立ち、時間', '人間は堕落する。義士も聖女も堕落する。それを防ぐことはで'];
 

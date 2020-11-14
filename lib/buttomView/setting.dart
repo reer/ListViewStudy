@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Setting extends StatefulWidget {
+class ButtonListScreen extends StatefulWidget {
   @override
-  _settingPageState createState() => _settingPageState();
+  _buttonListScreen createState() => _buttonListScreen();
 }
 
-class _settingPageState extends State<Setting> {
+class _buttonListScreen extends State<ButtonListScreen> {
   var index = 1;
   List<bool> isSelected = List.generate(2, (_) => false);
 
