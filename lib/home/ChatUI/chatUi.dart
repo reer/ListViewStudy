@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/home/ChatUI/category_selector.dart';
 
 class ChatUiScreen extends StatefulWidget {
   @override
@@ -10,6 +11,7 @@ class _chatUiScreen extends State<ChatUiScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.indigoAccent,
         leading: IconButton(
           icon: Icon(Icons.menu),
           iconSize: 20.0,
@@ -23,7 +25,7 @@ class _chatUiScreen extends State<ChatUiScreen> {
         elevation: 0.0,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.menu),
+            icon: Icon(Icons.search),
             iconSize: 20.0,
             color: Colors.white,
             onPressed: (){},
@@ -32,7 +34,7 @@ class _chatUiScreen extends State<ChatUiScreen> {
       ),
       body: Column(
         children: <Widget>[
-          // CategorySelector(),
+          CategorySelectorScreen(),
         ],
       ),
     );
