@@ -10,6 +10,7 @@ class _chatUiScreen extends State<ChatUiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.indigoAccent,
       appBar: AppBar(
         backgroundColor: Colors.indigoAccent,
         leading: IconButton(
@@ -28,13 +29,26 @@ class _chatUiScreen extends State<ChatUiScreen> {
             icon: Icon(Icons.search),
             iconSize: 20.0,
             color: Colors.white,
-            onPressed: (){},
+            onPressed: () {},
           )
         ],
       ),
       body: Column(
         children: <Widget>[
+          //AppBarしたのスクロールバー
           CategorySelectorScreen(),
+          Expanded(
+            //左右角が丸いコンテナ
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(30.0),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
