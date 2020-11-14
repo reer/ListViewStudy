@@ -30,12 +30,12 @@ class _samplePage extends State<Sample> {
               },
             ),
              Container(
-               height: 50,
+               height: 20,
              ),
              Column(
                  children: <Widget>[
                    SizedBox( // Horizontal ListView
-                     height: 100,
+                     height: 50,
                      child: ListView.builder(
                        itemCount: 3,
                        scrollDirection: Axis.horizontal,
@@ -56,7 +56,7 @@ class _samplePage extends State<Sample> {
                        itemBuilder: (context, index) {
                          return Container(
                            width: 50,
-                           height: 80,
+                           height: 20,
                            alignment: Alignment.center,
                            color: Colors.orange,
                            child: Text(index.toString()),
@@ -64,6 +64,26 @@ class _samplePage extends State<Sample> {
                        },
                      ),
                    ),
+                   // Container(
+                   //   height: ,
+                   // ),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.start,
+                     children: <Widget>[
+                       Icon(Icons.star, size: 50),
+                       Text('HelloWorld'),
+                       Icon(Icons.star, size: 50),
+                     ],
+                   ),
+                   Column(
+                     mainAxisAlignment: MainAxisAlignment.start,
+                     children: <Widget>[
+                       Icon(Icons.star, size: 50),
+                       Text('HelloWorld'),
+                       Icon(Icons.star, size: 50),
+                     ],
+                   )
+
                  ]
             )
           ],
@@ -72,26 +92,4 @@ class _samplePage extends State<Sample> {
     );
   }
 }
-    // return new Flexible(
-    //   child: new Column(
-    //     crossAxisAlignment: CrossAxisAlignment.start,
-    //     children: <Widget>[
-    //       new Container(
-    //         padding: new EdgeInsets.all(5.0),
-    //         child: new Text(
-    //           'hogehogehoge',
-    //           style: new TextStyle(fontWeight: FontWeight.bold),
-    //         ),
-    //       ),
-    //       new DefaultTextStyle(
-    //           style: new TextStyle(color: Colors.black),
-    //           overflow: TextOverflow.ellipsis,
-    //           maxLines: 3,
-    //           child: new Padding(
-    //             child: new Text('hogehogehhoge'),
-    //             padding: new EdgeInsets.only(top: 10.0),
-    //           )),
-    //     ],
-    //   ),
-    // );
 

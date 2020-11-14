@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-                  child: Text('Plants Screen', style: TextStyle(fontSize: 18)),
+                  child: Text('DashbordPage: Column & Container', style: TextStyle(fontSize: 18)),
                 ),
               ),
               onTap: (){
@@ -57,7 +57,7 @@ class Home extends StatelessWidget {
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-                  child: Text('SingleChildScreen', style: TextStyle(fontSize: 18)),
+                  child: Text('Side-scrolling', style: TextStyle(fontSize: 18)),
                 ),
               ),
               onTap: (){

@@ -17,7 +17,8 @@ class _singleChildScreen extends State<SingleChildScreen> {
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-        height: MediaQuery.of(context).size.height * 0.20,
+        // height: MediaQuery.of(context).size.height * 0.20,
+        height: 150,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: numbers.length, itemBuilder: (context, index) {

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/buttomView/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'detailspage.dart';
@@ -20,16 +21,25 @@ class _DashbordPageState extends State<DashbordPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Container(
-                height: 40.0,
-                width: 40.0,
+              GestureDetector(
+                child: Container(
+                  height: 40.0,
+                  width: 40.0,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(7.0),
-                    color: Color(0xFFFD4F99)
+                      borderRadius: BorderRadius.circular(7.0),
+                      color: Color(0xFFFD4F99)
                   ),
-                child: Center(
-                  child: Icon(Icons.filter_list, color: Colors.white),
+                  child: Center(
+                    child: Icon(Icons.filter_list, color: Colors.white),
+                  ),
                 ),
+                onTap: (){
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => Home(),
+                    ),
+                  );
+                },
               ),
               Text(
                 'HOME',
