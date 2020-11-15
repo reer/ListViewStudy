@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_app/home/ChatUI/category_selector.dart';
 import 'package:flutter_list_app/home/ChatUI/favorite_contacts.dart';
+import 'package:flutter_list_app/home/ChatUI/recent_chats.dart';
 
 class ChatUiScreen extends StatefulWidget {
   @override
@@ -42,7 +43,7 @@ class _chatUiScreen extends State<ChatUiScreen> {
             //左右角が丸いコンテナ
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.grey,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30.0),
                   topRight: Radius.circular(30.0),
@@ -50,7 +51,8 @@ class _chatUiScreen extends State<ChatUiScreen> {
               ),
               child: Column(
                 children: <Widget>[
-                  FavoriteContactsScreen()
+                  FavoriteContactsScreen(),
+                  RecentChatsScreen(),
                 ],
               ),
             ),
@@ -58,5 +60,6 @@ class _chatUiScreen extends State<ChatUiScreen> {
         ],
       ),
     );
+    // color: Colors.blue,
   }
 }
