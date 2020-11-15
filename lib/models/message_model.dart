@@ -132,6 +132,52 @@ List<Message> chats = [
   ),
 ];
 
+// チャットのメッセージ
+List<Message> messages = [
+  Message(
+    sender: test1,
+    time: '5:30 PM',
+    text: 'Hey, how\'s it going? What did you do today?',
+    isLiked: true,
+    unread: true,
+  ),
+  Message(
+    sender: currentUser,
+    time: '4:30 PM',
+    text: 'hogehogeでした！',
+    isLiked: false,
+    unread: true,
+  ),
+  Message(
+    sender: test1,
+    time: '3:45 PM',
+    text: 'How\'s the doggo?',
+    isLiked: false,
+    unread: true,
+  ),
+  Message(
+    sender: test1,
+    time: '3:15 PM',
+    text: '食べ物',
+    isLiked: true,
+    unread: true,
+  ),
+  Message(
+    sender: currentUser,
+    time: '2:30 PM',
+    text: '食べたことある?',
+    isLiked: false,
+    unread: true,
+  ),
+  Message(
+    sender: test1,
+    time: '2:00 PM',
+    text: '今日食べに行った！',
+    isLiked: false,
+    unread: true,
+  ),
+];
+
 
 
 
