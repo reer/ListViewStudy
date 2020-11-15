@@ -99,7 +99,7 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                             ),
                           ),
                         )
-                            : Text(''),
+                            : SizedBox.shrink(),
                       ],
                     )
                   ],
