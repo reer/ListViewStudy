@@ -33,7 +33,9 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                 decoration: BoxDecoration(
                     //既読の場合、背景色を変える (演算子)
-                    color: chat.unread ? Color(0xFFFFEFEE) : Colors.white),
+                    color: chat.unread ? Color(0xFFFFEFEE) : Colors.white,
+                  borderRadius: BorderRadius.circular(30.0)
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -80,7 +82,8 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                               fontSize: 15.0,
                               fontWeight: FontWeight.bold),
                         ),
-                        Container(
+                        SizedBox(height: 10.0),
+                        chat.unread? Container(
                           width: 40.0,
                           height: 20.0,
                           decoration: BoxDecoration(
@@ -95,7 +98,8 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                               fontWeight: FontWeight.bold
                             ),
                           ),
-                        ),
+                        )
+                            : Text(''),
                       ],
                     )
                   ],

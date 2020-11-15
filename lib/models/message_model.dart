@@ -93,7 +93,7 @@ List<Message> chats = [
       time: '5:00 PM',
       text: 'こんにちは',
     isLiked: false,
-    unread: true,
+    unread: false,
   ),
   Message(
     sender: test2,
@@ -107,14 +107,14 @@ List<Message> chats = [
     time: '5:00 PM',
     text: 'Hey, how\'s it going?',
     isLiked: false,
-    unread: true,
+    unread: false,
   ),
   Message(
     sender: test4,
     time: '5:00 PM',
     text: 'Hey, how\'s it going?',
     isLiked: true,
-    unread: false,
+    unread: true,
   ),
   Message(
     sender: test5,
@@ -128,7 +128,7 @@ List<Message> chats = [
     time: '5:00 PM',
     text: 'Hello!!',
     isLiked: true,
-    unread: false,
+    unread: true,
   ),
 ];
 
