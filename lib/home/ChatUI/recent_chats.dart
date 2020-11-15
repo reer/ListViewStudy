@@ -32,9 +32,8 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                 //テキスト部分のListの間隔の調整
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                 decoration: BoxDecoration(
-                  //既読の場合、背景色を変える
-                  color: chat.unread ? Color(0xFFFFEFEE) : Colors.white
-                ),
+                    //既読の場合、背景色を変える
+                    color: chat.unread ? Color(0xFFFFEFEE) : Colors.white),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -54,8 +53,7 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                               style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 15.0,
-                                  fontWeight: FontWeight
-                                      .bold),
+                                  fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 5.0),
                             Container(
@@ -75,8 +73,23 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                     ),
                     Column(
                       children: <Widget>[
-                        Text(chat.time),
-                        Text('New'),
+                        Text(
+                          chat.time,
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Container(
+                          width: 40.0,
+                          height: 20.0,
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).primaryColor,
+                            borderRadius: BorderRadius.circular(30.0)
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('New'),
+                        ),
                       ],
                     )
                   ],
