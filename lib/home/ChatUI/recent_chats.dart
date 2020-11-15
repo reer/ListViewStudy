@@ -32,7 +32,7 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                 //テキスト部分のListの間隔の調整
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                 decoration: BoxDecoration(
-                    //既読の場合、背景色を変える
+                    //既読の場合、背景色を変える (演算子)
                     color: chat.unread ? Color(0xFFFFEFEE) : Colors.white),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,7 +88,13 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                             borderRadius: BorderRadius.circular(30.0)
                           ),
                           alignment: Alignment.center,
-                          child: Text('New'),
+                          child: Text('New',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
                         ),
                       ],
                     )
