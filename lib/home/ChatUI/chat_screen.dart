@@ -17,6 +17,10 @@ class ChatScreen extends StatefulWidget {
 class _chatScreen extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.user.name),
+      ),
+    );
   }
 }
