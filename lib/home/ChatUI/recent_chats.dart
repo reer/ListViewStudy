@@ -32,7 +32,8 @@ class _recentChatsScreen extends State<RecentChatsScreen> {
                 //テキスト部分のListの間隔の調整
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                 decoration: BoxDecoration(
-                  color: Color(0xFFFFEFEE)
+                  //既読の場合、背景色を変える
+                  color: chat.unread ? Color(0xFFFFEFEE) : Colors.white
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
