@@ -14,6 +14,7 @@ class _chatScreen extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
         title: Text(
           widget.user.name,
@@ -27,6 +28,13 @@ class _chatScreen extends State<ChatScreen> {
             onPressed: () {},
           )
         ],
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.only(
+            topRight: Radius.circular(30.0),
+            topLeft: Radius.circular(30.0),),
+        ),
       ),
     );
   }
