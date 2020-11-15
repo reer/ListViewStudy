@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/home/ChatUI/chat_screen.dart';
 import 'package:flutter_list_app/models/message_model.dart';
 
 class FavoriteContactsScreen extends StatefulWidget {
@@ -46,27 +47,36 @@ class _favoriteContactsScreen extends State<FavoriteContactsScreen> {
               //messageモデルのfavoritesからデータを取得
               itemCount: favorites.length,
               itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
-                  //全体的な要素(画像部分)の感覚を空ける
-                  child: Column(
-                    children: <Widget>[
-                      //messageモデルのfavoritesから、List<User>でUserモデルにアクセスをし、imageUrlを取得
-                      CircleAvatar(
-                        radius: 35.0,
-                        backgroundImage: AssetImage(favorites[index].imageUrl),
-                      ),
-                      SizedBox(
-                        height: 6.0,
-                      ),
-                      Text(
-                        favorites[index].name,
-                        style: TextStyle(
-                            color: Colors.blueGrey,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ],
+                return GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => ChatScreen(user: favorites[index]),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    //全体的な要素(画像部分)の感覚を空ける
+                    child: Column(
+                      children: <Widget>[
+                        //messageモデルのfavoritesから、List<User>でUserモデルにアクセスをし、imageUrlを取得
+                        CircleAvatar(
+                          radius: 35.0,
+                          backgroundImage:
+                              AssetImage(favorites[index].imageUrl),
+                        ),
+                        SizedBox(
+                          height: 6.0,
+                        ),
+                        Text(
+                          favorites[index].name,
+                          style: TextStyle(
+                              color: Colors.blueGrey,
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
