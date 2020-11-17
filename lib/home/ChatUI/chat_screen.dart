@@ -47,6 +47,7 @@ class _chatScreen extends State<ChatScreen> {
                   topRight: Radius.circular(30.0),
                 )),
                 child: ListView.builder(
+                  padding: EdgeInsets.only(top: 15.0),
                   itemCount: chats.length,
                   //buildContextにmessageモデルのindexが入ってくる
                   itemBuilder: (BuildContext context, int index) {
