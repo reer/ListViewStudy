@@ -41,13 +41,19 @@ class _chatScreen extends State<ChatScreen> {
                   topLeft: Radius.circular(30.0),
                 ),
               ),
-              child: ListView.builder(
-                itemCount: chats.length,
-                //buildContextにmessageモデルのindexが入ってくる
-                itemBuilder: (BuildContext context, int index) {
-                  //buildContextにmessageモデルのindexのtextのみ取得して表示
-                  return Text(messages[index].text);
-                },
+              child: ClipRRect(
+                borderRadius: (BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(30.0),
+                )),
+                child: ListView.builder(
+                  itemCount: chats.length,
+                  //buildContextにmessageモデルのindexが入ってくる
+                  itemBuilder: (BuildContext context, int index) {
+                    //buildContextにmessageモデルのindexのtextのみ取得して表示
+                    return Text(messages[index].text);
+                  },
+                ),
               ),
             ),
           ),
