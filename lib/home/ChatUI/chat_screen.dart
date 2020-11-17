@@ -30,26 +30,26 @@ class _chatScreen extends State<ChatScreen> {
           )
         ],
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(30.0),
-            topLeft: Radius.circular(30.0),
-          ),
-        ),
-        child: Column(
-          children: <Widget>[
-            ListView.builder(
+      body: Column(
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(30.0),
+                topLeft: Radius.circular(30.0),
+              ),
+            ),
+            child: ListView.builder(
               itemCount: chats.length,
               //buildContextにmessageモデルのindexが入ってくる
               itemBuilder: (BuildContext context, int index) {
                 //buildContextにmessageモデルのindexのtextのみ取得して表示
                 return Text(messages[index].text);
               },
-            )
-          ],
-        ),
+            ),
+          ),
+        ],
       ),
     );
   }
