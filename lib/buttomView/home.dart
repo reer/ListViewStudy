@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/GridView/grid_view.dart';
 import 'package:flutter_list_app/home/ChatUI/chatUi.dart';
 import 'package:flutter_list_app/instructor/list_instructor.dart';
 
@@ -94,7 +95,7 @@ class Home extends StatelessWidget {
               onTap: (){
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => ChatUiScreen(),
+                    builder: (context) => GridViewLayoutScreen(),
                   ),
                 );
               },
