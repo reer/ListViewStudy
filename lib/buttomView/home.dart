@@ -89,6 +89,21 @@ class Home extends StatelessWidget {
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+                  child: Text('', style: TextStyle(fontSize: 18)),
+                ),
+              ),
+              onTap: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => GridViewLayoutScreen(),
+                  ),
+                );
+              },
+            ),
+            GestureDetector(
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
                   child: Text('ListView & GridView', style: TextStyle(fontSize: 18)),
                 ),
               ),
