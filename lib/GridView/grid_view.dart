@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/buttomView/home.dart';
 
 class GridViewLayoutScreen extends StatefulWidget {
   @override
@@ -6,37 +7,27 @@ class GridViewLayoutScreen extends StatefulWidget {
 }
 
 class _gridViewLayoutScreen extends State<GridViewLayoutScreen> {
-  _ListView() {
-    return Scaffold(
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            ListView.builder(
-              itemCount: 6,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, int index) {
-                return Container(
-                  width: 145.0,
-                  margin: EdgeInsets.symmetric(horizontal: 5.0),
-                  color: Colors.grey[300],
-                  child: Center(
-                    child: Text("ListView $index"),
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GridView & ListView'),
+        title: Text("ListView & GridView"),
         centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back, //戻るボタン
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Home(),
+              ),
+            );
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
