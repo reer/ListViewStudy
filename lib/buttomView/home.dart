@@ -84,6 +84,21 @@ class Home extends StatelessWidget {
                 );
               },
             ),
+            GestureDetector(
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+                  child: Text('ListView & GridView', style: TextStyle(fontSize: 18)),
+                ),
+              ),
+              onTap: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ChatUiScreen(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
