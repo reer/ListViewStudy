@@ -15,6 +15,7 @@ class _chatScreen extends State<ChatScreen> {
 
   _buildMessage(Message message, bool isMe) {
     return Container(
+      margin: EdgeInsets.only(top: 8.0, left: 80.0),
       color: Color(0xFFFFEFEE),
       child: Text(message.text),
     );
