@@ -12,6 +12,14 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _chatScreen extends State<ChatScreen> {
+
+  _buildMessage(Message message, bool isMe) {
+    return Container(
+      color: Color(0xFFFFEFEE),
+      child: Text(message.text),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,8 +59,10 @@ class _chatScreen extends State<ChatScreen> {
                   itemCount: chats.length,
                   //buildContextにmessageモデルのindexが入ってくる
                   itemBuilder: (BuildContext context, int index) {
+                    final Message message = messages[index];
+                    final bool isMe = message.sender.id == currentUser.id;
                     //buildContextにmessageモデルのindexのtextのみ取得して表示
-                    return Text(messages[index].text);
+                    return _buildMessage(message, isMe);
                   },
                 ),
               ),
