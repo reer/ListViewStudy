@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_list_app/GridView/grid_view.dart';
 import 'package:flutter_list_app/home/ChatUI/chatUi.dart';
 import 'package:flutter_list_app/instructor/list_instructor.dart';
+import 'package:flutter_list_app/travel/travel_screen.dart';
 
 import '../novel_design.dart';
 import '../home/single_scroll_screen.dart';
@@ -89,7 +90,7 @@ class Home extends StatelessWidget {
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-                  child: Text('', style: TextStyle(fontSize: 18)),
+                  child: Text('ListView & GridView', style: TextStyle(fontSize: 18)),
                 ),
               ),
               onTap: (){
@@ -104,13 +105,13 @@ class Home extends StatelessWidget {
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-                  child: Text('ListView & GridView', style: TextStyle(fontSize: 18)),
+                  child: Text('', style: TextStyle(fontSize: 18)),
                 ),
               ),
               onTap: (){
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => GridViewLayoutScreen(),
+                    builder: (context) => TravelScreen(),
                   ),
                 );
               },

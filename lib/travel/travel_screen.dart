@@ -12,7 +12,8 @@ class TravelScreen extends StatefulWidget {
 class _travelScreen extends State<TravelScreen> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Scaffold(
+      backgroundColor: Vx.purple500,
+    );
   }
 }
