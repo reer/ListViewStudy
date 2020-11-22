@@ -35,7 +35,13 @@ class _chatScreen extends State<ChatScreen> {
             bottomRight: Radius.circular(15.0),
           )
       ),
-      child: Text(message.text),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(message.time),
+          Text(message.text),
+        ],
+      )
     );
   }
 
