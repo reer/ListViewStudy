@@ -15,8 +15,18 @@ class _chatScreen extends State<ChatScreen> {
 
   _buildMessage(Message message, bool isMe) {
     return Container(
-      margin: EdgeInsets.only(top: 8.0, left: 80.0),
-      color: Color(0xFFFFEFEE),
+      margin: isMe
+          ? EdgeInsets.only(
+        top: 8.0,
+        bottom: 8.0,
+        left: 80.0,
+      )
+          : EdgeInsets.only(
+        top: 8.0,
+        bottom: 8.0,
+      ),
+      padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
+      color: isMe ? Theme.of(context).accentColor : Color(0xFFFFEFEE),
       child: Text(message.text),
     );
   }
@@ -56,11 +66,13 @@ class _chatScreen extends State<ChatScreen> {
                   topRight: Radius.circular(30.0),
                 )),
                 child: ListView.builder(
+                  // reverse: true,
                   padding: EdgeInsets.only(top: 15.0),
-                  itemCount: chats.length,
+                  itemCount: messages.length,
                   //buildContextにmessageモデルのindexが入ってくる
                   itemBuilder: (BuildContext context, int index) {
                     final Message message = messages[index];
+                    //currentUserとmessageのsenderIdが同じであれば、変数isMeに格納する
                     final bool isMe = message.sender.id == currentUser.id;
                     //buildContextにmessageモデルのindexのtextのみ取得して表示
                     return _buildMessage(message, isMe);
