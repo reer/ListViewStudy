@@ -27,21 +27,35 @@ class _chatScreen extends State<ChatScreen> {
       padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
       decoration: BoxDecoration(
           color: isMe ? Theme.of(context).accentColor : Color(0xFFFFEFEE),
-          borderRadius: isMe ? BorderRadius.only(
-            topLeft: Radius.circular(15.0),
-            bottomLeft: Radius.circular(15.0),
-          ) :  BorderRadius.only(
-            topRight: Radius.circular(15.0),
-            bottomRight: Radius.circular(15.0),
-          )
-      ),
+          borderRadius: isMe
+              ? BorderRadius.only(
+                  topLeft: Radius.circular(15.0),
+                  bottomLeft: Radius.circular(15.0),
+                )
+              : BorderRadius.only(
+                  topRight: Radius.circular(15.0),
+                  bottomRight: Radius.circular(15.0),
+                )),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(message.time),
-          Text(message.text),
+          Text(
+            message.time,
+            style: TextStyle(
+                color: Colors.blueGrey,
+                fontSize: 15.0,
+                fontWeight: FontWeight.w600),
+          ),
+          SizedBox(height: 8.0),
+          Text(
+            message.text,
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 15.0,
+                fontWeight: FontWeight.w300),
+          )
         ],
-      )
+      ),
     );
   }
 
