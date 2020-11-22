@@ -61,9 +61,11 @@ class _ChatScreenState extends State<ChatScreen> {
         ],
       ),
     );
+    //もし自分自身である場合(isMeの場合)メッセージのみ表示する
     if (isMe) {
       return msg;
     }
+    //自分以外の場合、favorite月のメッセージを表示する
     return Row(
       children: <Widget>[
         msg,
@@ -84,7 +86,7 @@ class _ChatScreenState extends State<ChatScreen> {
   _buildMessageComposer() {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 8.0),
-      height: 70.0,
+      height: 130.0,
       color: Colors.white,
       child: Row(
         children: <Widget>[
@@ -171,6 +173,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 ),
               ),
             ),
+            //メッセージ送信枠
             _buildMessageComposer(),
           ],
         ),
