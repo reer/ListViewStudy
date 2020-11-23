@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_list_app/travel/widgets.dart';
 import 'package:flutter_list_app/utiles/custom_app_bar.dart';
 import 'package:flutter_list_app/utiles/palette.dart';
+import 'package:flutter_list_app/utiles/style.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -77,8 +78,44 @@ class _homeScreen extends State<HomeScreen> {
             ),
             SizedBox(height: screenHeight * 0.03),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                
+                FlatButton.icon(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 20.0
+                  ),
+                  color: Colors.red,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                  onPressed: (){},
+                  icon: const Icon(
+                    Icons.phone,
+                    color: Colors.white,
+                  ),
+                  label: Text(
+                    'Call Now',
+                    style: Styles.buttonTextStyle,
+                  ),
+                  textColor: Colors.white,
+                ),
+                FlatButton.icon(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 20.0
+                  ),
+                  color: Colors.blue,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                  onPressed: (){},
+                  icon: const Icon(
+                    Icons.chat_bubble,
+                    color: Colors.white,
+                  ),
+                  label: Text(
+                    'Send SNS',
+                    style: Styles.buttonTextStyle,
+                  ),
+                  textColor: Colors.white,
+                )
               ],
             ),
           ],
