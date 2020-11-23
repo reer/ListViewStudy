@@ -55,7 +55,32 @@ class _homeScreen extends State<HomeScreen> {
                   onChanged: (val) => setState(() => _country = val),
                 ),
               ],
-            )
+            ),
+            SizedBox(height: screenHeight * 0.03),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'This condo is located in Málagas Cruz de Humilladero',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w600),
+                ),
+                SizedBox(height: screenHeight * 0.01),
+                Text('Toros de la Malagueta or Jose Maria Martin Carpena Arena',
+                    style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w600)),
+              ],
+            ),
+            SizedBox(height: screenHeight * 0.03),
+            Row(
+              children: <Widget>[
+                
+              ],
+            ),
           ],
         ),
       ),
