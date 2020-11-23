@@ -1,4 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/card_list.dart';
+import 'package:flutter_list_app/sample.dart';
+
+import 'buttomNavigation.dart';
+import 'buttomView/home.dart';
+import 'buttomView/setting.dart';
+import 'instructor/list_instructor.dart';
+import 'novel_design.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,9 +29,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
+  MyHomePage({Key key, this.title, this.thumbnail}) : super(key: key);
   final String title;
+  final thumbnail;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -32,45 +41,48 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('ListViewApp'),
-        ),
-        body: ListView(
-            children: [
-              _menueItem('メニュー1'),
-              _menueItem('メニュー2'),
-              _menueItem('メニュー3'),
-              _menueItem('メニュー4'),
-              _menueItem('メニュー5'),
-              _menueItem('メニュー6'),
-              _menueItem('メニュー7'),
-            ]
-        ),
+    return CupertinoTabScaffold(
+      tabBar: CupertinoTabBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(Icons.filter_list, color: Colors.blue),
+              title: Text('HOME')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.filter_list, color: Colors.blue),
+              title: Text('SETTING')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.filter_list, color: Colors.blue),
+              title: Text('TEXT')),
+        ],
       ),
-    );
-  }
-
-  Widget _menueItem(String title) {
-    return GestureDetector(
-      child: Container(
-        padding: EdgeInsets.all(8.0),
-        decoration: new BoxDecoration(
-          border: new Border(bottom: BorderSide(width: 1.0, color: Colors.red))
-        ),
-        child: Row(
-          children: <Widget>[
-            Text(
-              title,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0
-              )
-            ),
-          ],
-        ),
-      ),
+      tabBuilder: (context, index) {
+        switch (index) {
+          case 0:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                navigationBar: CupertinoNavigationBar(// ページのヘッダ左のアイコン
+                ),
+                child: Home(),
+              );
+            });
+          case 1:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                navigationBar: CupertinoNavigationBar(
+                ),
+                child: ButtonListScreen(),
+              );
+            });
+          case 2:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                navigationBar: CupertinoNavigationBar(
+                ),
+                child: LayoutSample(),
+              );
+            });
+        }
+      },
     );
   }
 }
