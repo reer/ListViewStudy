@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_app/travel/home_screen.dart';
+import 'package:flutter_list_app/travel/stats_screen.dart';
 
 class BottomNavScreen extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class _bottomNavScreen extends State<BottomNavScreen> {
   //画面遷移箇所はScaffold()をクラス名に変更すればOK
   final List _screen = [
     HomeScreen(),
-    Scaffold(),
+    StatsScreen(),
     Scaffold(),
     Scaffold(),
     Scaffold(),
