@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
+import 'package:flutter_list_app/travel/buttom_nav_screen.dart';
+
 
 class TravelScreen extends StatefulWidget {
   @override
@@ -9,19 +11,16 @@ class TravelScreen extends StatefulWidget {
 class _travelScreen extends State<TravelScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Vx.purple500,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        leading: VStack([
-          VxBox().size(20, 2).white.make(),
-          5.heightBox,
-          VxBox().size(26, 2).white.make(),
-          5.heightBox,
-          VxBox().size(15, 2).white.make(),
-        ]).pOnly(left: 16, top: 16),
+    return MaterialApp(
+      title: 'Flutter App',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+        visualDensity: VisualDensity.adaptivePlatformDensity
       ),
+
+      home: BottomNavScreen()
     );
   }
 }

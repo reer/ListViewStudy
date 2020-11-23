@@ -31,6 +31,8 @@ dependencies:
   smooth_star_rating: 1.1.1
   flutter_svg: ^0.19.1
   velocity_x: 0.4.1
+  bubble_tab_indicator: ^0.1.4
+  fl_chart: ^0.9.4
   google_fonts:
 
 dev_dependencies:
