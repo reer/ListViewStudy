@@ -22,7 +22,8 @@ class _homeScreen extends State<HomeScreen> {
         physics: ClampingScrollPhysics(),
         slivers: <Widget>[
           _buildHeader(screenHeight), //ヘッダー部分のレイアウト
-          _buildPreventTips(screenHeight),
+          _buildPreventTips(screenHeight), //画面中央にて画像とテキストを配置
+          _buildYourOwnTest(screenHeight),
         ],
       ),
     );
@@ -128,31 +129,81 @@ class _homeScreen extends State<HomeScreen> {
     return SliverToBoxAdapter(
       child: Container(
         padding: const EdgeInsets.all(20.0),
-        color: Colors.orange,
+        color: Colors.white,
         child: Column(
           children: <Widget>[
             Text(
               'Preventation Tips',
-              style: TextStyle(
-                fontSize: 22.0,
-                fontWeight: FontWeight.w600
-              ),
+              style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
             ),
             const SizedBox(height: 20.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               //date.dartファイルの "prevention" に記載しているデータを表示
-              children: prevention.map(
-                  (e) => Column(
-                    children: <Widget>[
-                      Image.asset(
-                        e.keys.first,
-                        height: screenHeight * 0.10,
-                      ),
-                      SizedBox(height: screenHeight * 0.015)
-                    ],
-                  ),
-              ).toList(),
+              children: prevention
+                  .map(
+                    (e) => Column(
+                      children: <Widget>[
+                        Image.asset(
+                          e.keys.first,
+                          height: screenHeight * 0.10,
+                        ),
+                        SizedBox(height: screenHeight * 0.015),
+                        Text(
+                          e.values.first,
+                          style: const TextStyle(
+                              fontSize: 16.0, fontWeight: FontWeight.w600),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                  )
+                  .toList(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  SliverToBoxAdapter _buildYourOwnTest(double screenHeight) {
+    return SliverToBoxAdapter(
+      child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+        padding: const EdgeInsets.all(10.0),
+        color: Colors.orange,
+        height: screenHeight * 0.15,
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     colors: [Color(0xFFAD9FE4), Palette.primaryColor],
+        //   ),
+        //   borderRadius: BorderRadius.circular(20.0),
+        // ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            // Image.asset('assets/images/own_test.png') //画像を差し込んだ場合、左側に配置される
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Do your own test!',
+                  style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: screenHeight * 0.01),
+                Text(
+                  'Follow the istruction \n to do your own test!',
+                  style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold),
+                  maxLines: 2,
+                ),
+              ],
             ),
           ],
         ),
