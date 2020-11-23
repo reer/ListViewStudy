@@ -48,6 +48,9 @@ class _homeScreen extends State<HomeScreen> {
                       fontSize: 25.0,
                       fontWeight: FontWeight.bold),
                 ),
+                SizedBox(
+                  width: 10,
+                ),
                 CountryDropdown(
                   countries: ['FR', 'IN', 'IT', 'UK', 'USA', 'JP'],
                   country: _country,
