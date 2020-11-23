@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/travel/widgets.dart';
 import 'package:flutter_list_app/utiles/custom_app_bar.dart';
 import 'package:flutter_list_app/utiles/palette.dart';
 
@@ -8,6 +9,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _homeScreen extends State<HomeScreen> {
+  String _country = 'USA';
+
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -45,7 +48,11 @@ class _homeScreen extends State<HomeScreen> {
                       fontSize: 25.0,
                       fontWeight: FontWeight.bold),
                 ),
-                CountryDropdown(),
+                CountryDropdown(
+                  countries: ['FR', 'IN', 'IT', 'UK', 'USA', 'JP'],
+                  country: _country,
+                  onChanged: (val) => setState(() => _country = val),
+                ),
               ],
             )
           ],
