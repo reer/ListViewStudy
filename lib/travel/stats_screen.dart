@@ -1,6 +1,7 @@
 
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/data/data.dart';
 import 'package:flutter_list_app/travel/widgets.dart';
 import 'package:flutter_list_app/utiles/palette.dart';
 import 'package:flutter_list_app/utiles/style.dart';
@@ -29,6 +30,13 @@ class _statusScreen extends State<StatsScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             sliver: SliverToBoxAdapter(
               child: StatsGrids(),
+            ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            sliver: SliverToBoxAdapter(
+              //data.dartで作成した "covidUSADailNewCases" のデータを挿入
+              child: CovidBarChart(covidCases: covidUSADailNewCases),
             ),
           ),
         ],
