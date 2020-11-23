@@ -29,6 +29,7 @@ class _bottomNavScreen extends State<BottomNavScreen> {
         showUnselectedLabels: false,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
+        elevation: 0.0,
         items: [Icons.home, Icons.insert_chart, Icons.event_note, Icons.info]
             .asMap()
             .map((key, value) => MapEntry(
