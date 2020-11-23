@@ -24,7 +24,13 @@ class _statusScreen extends State<StatsScreen> {
         slivers: <Widget>[
           _buildHeader(),
           _buildRegionTabBar(),
-          _buildStatusTabBar()
+          _buildStatusTabBar(),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            sliver: SliverToBoxAdapter(
+              child: StatsGrids(),
+            ),
+          ),
         ],
       ),
     );
