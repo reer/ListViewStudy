@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_app/data/data.dart';
 import 'package:flutter_list_app/travel/widgets.dart';
 import 'package:flutter_list_app/utiles/custom_app_bar.dart';
 import 'package:flutter_list_app/utiles/palette.dart';
@@ -20,13 +21,14 @@ class _homeScreen extends State<HomeScreen> {
       body: CustomScrollView(
         physics: ClampingScrollPhysics(),
         slivers: <Widget>[
-          _buildHeader(screenHeight),
+          _buildHeader(screenHeight), //ヘッダー部分のレイアウト
+          _buildPreventTips(screenHeight),
         ],
       ),
     );
   }
 
-  //AppBarの形を変更している。今回の場合角丸
+  //ヘッダー部分のレイアウト
   SliverToBoxAdapter _buildHeader(double screenHeight) {
     return SliverToBoxAdapter(
       child: Container(
@@ -82,12 +84,11 @@ class _homeScreen extends State<HomeScreen> {
               children: <Widget>[
                 FlatButton.icon(
                   padding: const EdgeInsets.symmetric(
-                    vertical: 10.0,
-                    horizontal: 20.0
-                  ),
+                      vertical: 10.0, horizontal: 20.0),
                   color: Colors.red,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-                  onPressed: (){},
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
+                  onPressed: () {},
                   icon: const Icon(
                     Icons.phone,
                     color: Colors.white,
@@ -100,12 +101,11 @@ class _homeScreen extends State<HomeScreen> {
                 ),
                 FlatButton.icon(
                   padding: const EdgeInsets.symmetric(
-                      vertical: 10.0,
-                      horizontal: 20.0
-                  ),
+                      vertical: 10.0, horizontal: 20.0),
                   color: Colors.blue,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-                  onPressed: (){},
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
+                  onPressed: () {},
                   icon: const Icon(
                     Icons.chat_bubble,
                     color: Colors.white,
@@ -117,6 +117,42 @@ class _homeScreen extends State<HomeScreen> {
                   textColor: Colors.white,
                 )
               ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  SliverToBoxAdapter _buildPreventTips(double screenHeight) {
+    return SliverToBoxAdapter(
+      child: Container(
+        padding: const EdgeInsets.all(20.0),
+        color: Colors.orange,
+        child: Column(
+          children: <Widget>[
+            Text(
+              'Preventation Tips',
+              style: TextStyle(
+                fontSize: 22.0,
+                fontWeight: FontWeight.w600
+              ),
+            ),
+            const SizedBox(height: 20.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //date.dartファイルの "prevention" に記載しているデータを表示
+              children: prevention.map(
+                  (e) => Column(
+                    children: <Widget>[
+                      Image.asset(
+                        e.keys.first,
+                        height: screenHeight * 0.10,
+                      ),
+                      SizedBox(height: screenHeight * 0.015)
+                    ],
+                  ),
+              ).toList(),
             ),
           ],
         ),
