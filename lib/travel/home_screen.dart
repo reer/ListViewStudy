@@ -40,6 +40,7 @@ class _homeScreen extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
                   'Travel',
@@ -47,9 +48,6 @@ class _homeScreen extends State<HomeScreen> {
                       color: Colors.white,
                       fontSize: 25.0,
                       fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  width: 10,
                 ),
                 CountryDropdown(
                   countries: ['FR', 'IN', 'IT', 'UK', 'USA', 'JP'],
